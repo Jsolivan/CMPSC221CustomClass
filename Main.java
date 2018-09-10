@@ -1,23 +1,18 @@
-// John Doe
-
+/* Custom Classes
+@author Jack Solivan CMPSC 221
+*/
 public class Main 
 {
   
   public static void main(String[] args) 
   {
-    //System.out.println("hello world");
-    //sayHello();
+    
+    
     Chatbot siri = new Chatbot();
-    siri.sayHello();
-  }
-  
-  // behaviors
-  public static void sayHello()
-  {
-    System.out.println("Hi!");
-  }
-
-  
+    siri.Greet();
+    siri.Weather();
+    siri.Time();
+  } 
 }
 
 //////////////////////////////////////////////////////////
@@ -25,19 +20,29 @@ public class Main
 class Chatbot
 {
     // state (properties)
-    private String myAccent;
-    private int myVolume;
-    
+    private int Farenheit; 
+    private int EST;
+    private int Volume;
     public Chatbot()
     {
-      myAccent = "English";
-      myVolume = 5;
+     Farenheit = 65;
+     EST = 3;
+     Volume= 15;
     }
     
     // behaviors (methods)
-    public void sayHello()
+    public void Greet()
     {
-      System.out.println("Hi there! " + myVolume);
+      System.out.println("What's up! " +"volume is " +Volume + "db");
     }
+    public void Weather()
+    {
+      System.out.println("The weather is nice outside, " +Farenheit + " degrees Farenheit");
+    }
+    public void Time()
+    {
+      System.out.println("Its the afternoon, " +EST + ":00 to be exact");
+    }
+  
 
 }
